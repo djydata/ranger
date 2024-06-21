@@ -34,8 +34,6 @@ import org.apache.ranger.plugin.policyevaluator.RangerPolicyEvaluator;
 import org.apache.ranger.plugin.service.RangerAuthContextListener;
 import org.apache.ranger.plugin.service.RangerBasePlugin;
 import org.apache.ranger.plugin.util.RangerPerfTracer;
-
-import javax.validation.constraints.NotNull;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -52,7 +50,7 @@ public class RangerHivePolicyProvider implements HivePolicyProvider {
 
 	private final RangerBasePlugin  rangerPlugin;
 
-	public RangerHivePolicyProvider(@NotNull RangerBasePlugin hivePlugin) {
+	public RangerHivePolicyProvider(RangerBasePlugin hivePlugin) {
 
 		Set<String> privileges = new HashSet<>();
 		for (HiveResourceACLs.Privilege privilege : HiveResourceACLs.Privilege.values()) {
